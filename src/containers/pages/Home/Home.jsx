@@ -6,7 +6,8 @@ import Footer from '../../../components/Footer/Footer';
 
 class Home extends Component {
   state = {
-    amount: 0
+    amount: 0,
+    disable: false
   }
 
   componentDidMount() {
@@ -23,8 +24,22 @@ class Home extends Component {
     }
   }
 
+  setDisable = (val) => {
+    if (val <= 0) {
+      this.setState({
+        disable: true
+      })
+
+    } else {
+      this.setState({
+        disable: false
+      })
+    }
+  }
+
   setAmount = () => {
     localStorage.setItem('amount', this.state.amount);
+    this.setDisable(this.state.amount)
   }
 
   handleKurang = () => {
@@ -64,7 +79,8 @@ class Home extends Component {
           <Counter 
             amount={this.state.amount}
             handleKurang={() => this.handleKurang()}
-            handleTambah={() => this.handleTambah()} />
+            handleTambah={() => this.handleTambah()} 
+            isDisabled={this.state.disable}/>
         </div>
         <Footer />
       </Fragment>

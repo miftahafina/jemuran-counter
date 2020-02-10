@@ -12,10 +12,10 @@ const Counter = (props) => {
 
       <div className="section btn-counter">
         <div className="btn btn-md ml-8">
-          <button onClick={props.handleKurang}>Kurang</button>
+          <button onClick={props.handleKurang} disabled={props.isDisabled}>-</button>
         </div>
         <div className="btn btn-md ml-8">
-          <button onClick={props.handleTambah}>Tambah</button>
+          <button onClick={props.handleTambah}>+</button>
         </div>
       </div>
     </Fragment>
