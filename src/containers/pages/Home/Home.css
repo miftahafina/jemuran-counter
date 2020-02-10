@@ -148,8 +148,9 @@ h1 {
 }
 
 .btn > button:disabled {
-  background-color: var(--primary-dark);
-  color: var(--disabled-button);
+  background-color: var(--primary);
+  border: 2px solid var(--primary-light);
+  color: var(--primary-light);
 }
 
 .btn-md > button{
