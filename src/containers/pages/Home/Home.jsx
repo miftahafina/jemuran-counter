@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // Components
 import CounterContainer from '../CounterContainer/CounterContainer';
 import TimerContainer from '../TimerContainer/TimerContainer';
+import Navbar from '../../../components/Navbar/Navbar';
 import About from '../About/About';
 
 // Style
@@ -27,6 +28,8 @@ class Home extends Component {
             <CounterContainer />
           </Route>
         </Switch>
+
+        <Navbar />
       </Router>
     );
   }

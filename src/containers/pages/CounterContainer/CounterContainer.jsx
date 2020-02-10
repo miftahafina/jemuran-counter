@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Header from '../../../components/Header/Header';
 import Counter from '../../../components/Counter/Counter';
-// import Footer from '../../../components/Footer/Footer';
-import Navbar from '../../../components/Navbar/Navbar';
 
 class CounterContainer extends Component {
   state = {
@@ -75,18 +73,14 @@ class CounterContainer extends Component {
 
   render() {
     return (
-      <Fragment>
-        <div className="container">
-          <Header handleReset={this.handleReset}/>
-          <Counter 
-            amount={this.state.amount}
-            handleKurang={() => this.handleKurang()}
-            handleTambah={() => this.handleTambah()} 
-            isDisabled={this.state.disable}/>
-        </div>
-        {/* <Footer /> */}
-        <Navbar />
-      </Fragment>
+      <div className="container">
+        <Header handleReset={this.handleReset} title="Jemuran Counter"/>
+        <Counter 
+          amount={this.state.amount}
+          handleKurang={() => this.handleKurang()}
+          handleTambah={() => this.handleTambah()} 
+          isDisabled={this.state.disable}/>
+      </div>
     );
   }
 }

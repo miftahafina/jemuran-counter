@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import Header from '../../../components/Header/Header';
 
 class About extends Component {
   render() {
     return (
-      <h1>About</h1>
+      <div className="container">
+        <Header title="About"/>
+      </div>
     );
   }
 }

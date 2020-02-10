@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import Header from '../../../components/Header/Header';
 
 class TimerContainer extends Component {
   render() {
     return (
-      <h1>TimerContainer</h1>
+      <div className="container">
+        <Header title="Cucian Timer"/>
+      </div>
     );
   }
 }
