@@ -8,7 +8,7 @@ const Header = (props) => {
       </div>
 
       <div className="header-menu">
-        <button>Reset</button>
+        <button onClick={() => props.handleReset()}>Reset</button>
       </div>
     </div>
   );
