@@ -4,7 +4,7 @@ const Header = (props) => {
   return (
     <div className="section header">
       <div className="header-title">
-        <h1>Aplikasi</h1>
+        <h1>Jemuran Counter</h1>
       </div>
 
       <div className="header-menu">

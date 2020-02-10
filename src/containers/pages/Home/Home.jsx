@@ -20,7 +20,9 @@ class Home extends Component {
     if (storageAmount) {
       this.setState({
         amount: parseInt(storageAmount)
-      });
+      }, () => {this.setDisable(this.state.amount)});
+    } else {
+      this.setDisable(this.state.amount)
     }
   }
 
