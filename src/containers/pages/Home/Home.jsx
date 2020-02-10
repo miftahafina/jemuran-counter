@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import './Home.css';
 import Header from '../../../components/Header/Header';
-import Counter from '../../Counter/Counter';
+import Counter from '../../../components/Counter/Counter';
 import Footer from '../../../components/Footer/Footer';
 
 class Home extends Component {
