@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './Counter.css';
 
 class Counter extends Component {
@@ -55,36 +55,23 @@ class Counter extends Component {
 
   render() {
     return (
-        <div className="section">
-          <div className="container">
-            <div className="columns is-vcentered is-mobile">
-              <div className="column has-text-centered">
-                <h1 className="title is-size-super has-text-weight-light">
-                  {this.state.amount}
-                </h1>
-                <h2 className="subtitle">jemuran</h2>
-              </div>
-            </div>
-
-            <div className="columns is-mobile">
-              <div className="column">
-                <button className="button is-fullwidth" onClick={this.handleReset}>
-                  Reset
-                </button>
-              </div>
-              <div className="column">
-                <button className="button is-fullwidth" onClick={this.handleKurang}>
-                  -
-                </button>
-              </div>
-              <div className="column">
-                <button className="button is-fullwidth is-primary" onClick={this.handleTambah}>
-                  +
-                </button>
-              </div>
-            </div>
+      <Fragment>
+        <div className="section display-counter">
+          <div className="circle">
+            <p className="number">{this.state.amount}</p>
+            <small className="unit">jemuran</small>
           </div>
         </div>
+
+        <div className="section btn-counter">
+          <div className="btn btn-md ml-8">
+            <button onClick={this.handleKurang}>Kurang</button>
+          </div>
+          <div className="btn btn-md ml-8">
+            <button onClick={this.handleTambah}>Tambah</button>
+          </div>
+        </div>
+      </Fragment>
     );
   }
 }

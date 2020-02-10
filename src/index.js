@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bulma';
+import 'normalize.css';
+import './index.css';
 import Home from './containers/pages/Home/Home';
 import * as serviceWorker from './serviceWorker';
 
