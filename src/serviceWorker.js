@@ -47,18 +47,25 @@ export function register(config) {
           );
         });
       } else {
-        // Is not localhost. Just register service worker
+        // Check update
+        ServiceWorkerRegistration.onupdatefound = () => {
+          // Check if online
+          if (navigator.onLine) {
+            // Delete cache
+            caches.keys()
+              .then(function(names) {
+                for (let name of names)
+                    caches.delete(name);
+              })
 
-        // delete cache
-        caches.keys()
-          .then(function(names) {
-            for (let name of names)
-              caches.delete(name);
-          })
-          
-          .then(() => {
-            registerValidSW(swUrl, config);
-          });
+              .then(() => {
+                registerValidSW(swUrl, config);
+              });            
+          }
+        }
+        
+        // Is not localhost. Just register service worker
+        registerValidSW(swUrl, config);
       }
     });
   }
