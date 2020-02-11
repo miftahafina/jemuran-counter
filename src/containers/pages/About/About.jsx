@@ -23,8 +23,8 @@ class About extends Component {
   render() {
     return (
       <div className="container">
-        <Header title="About...."/>
-        <button onClick={this.handleReload}>Reload</button>
+        <Header title="About"/>
+        <button onClick={this.handleReload}>Reload...</button>
       </div>
     );
   }
