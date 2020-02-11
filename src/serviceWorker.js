@@ -58,9 +58,13 @@ export function register(config) {
                     caches.delete(name);
               })
 
+              // .then(() => {
+              //   registerValidSW(swUrl, config);
+              // })
+
               .then(() => {
-                registerValidSW(swUrl, config);
-              });            
+                window.location.href = "./";
+              });
           }
         }
         
