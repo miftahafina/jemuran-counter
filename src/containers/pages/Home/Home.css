@@ -209,7 +209,7 @@ h1 {
 }
 
 .navbar > a:active {
-  background-color: var(--primary-dark);
+  background-color: var(--primary-dark) !important;
 }
 
 .navbar > .active > img {
