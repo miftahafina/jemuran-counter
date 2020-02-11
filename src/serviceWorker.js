@@ -59,11 +59,11 @@ export function register(config) {
               })
 
               .then(() => {
-                registerValidSW(swUrl, config);
+                window.location.reload(true);
               })
 
               .then(() => {
-                window.location.reload(true);
+                registerValidSW(swUrl, config);
               });
           }
         }
