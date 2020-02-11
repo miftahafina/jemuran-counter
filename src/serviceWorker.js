@@ -48,12 +48,15 @@ export function register(config) {
         });
       } else {
         // Is not localhost. Just register service worker
+
+        // delete cache
         caches.keys()
           .then(function(names) {
             for (let name of names)
-                caches.delete(name);
-
-          }, () => {
+              caches.delete(name);
+          })
+          
+          .then(() => {
             registerValidSW(swUrl, config);
           });
       }

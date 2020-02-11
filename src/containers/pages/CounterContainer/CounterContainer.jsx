@@ -74,7 +74,7 @@ class CounterContainer extends Component {
   render() {
     return (
       <div className="container">
-        <Header handleReset={this.handleReset} title="Jemuran Counter."/>
+        <Header handleReset={this.handleReset} title="Jemuran Counter"/>
         <Counter 
           amount={this.state.amount}
           handleKurang={() => this.handleKurang()}
