@@ -19,7 +19,7 @@ class Navbar extends Component {
 
   componentDidMount() {
     const currentPage = this.props.history.location.pathname;
-    this.onNavChange(currentPage);
+    this.handleNavChange(currentPage);
   }
 
   handleNav = (destination) => {
@@ -27,11 +27,11 @@ class Navbar extends Component {
     this.setState({
       location: this.props.history.location
     }, () => {
-      this.onNavChange(destination);
+      this.handleNavChange(destination);
     });
   }
 
-  onNavChange = (currentPage) => {
+  handleNavChange = (currentPage) => {
     switch (currentPage) {
       case '/':
         this.setState({
@@ -74,7 +74,6 @@ class Navbar extends Component {
         break;
     }
   }
-  
 
   render() {
     let { counter, timer, about } = this.state.nav;
